@@ -1,0 +1,72 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, #333333 , #262626, #1F1F1F, #000000);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #3a3a3a;
+    border: none;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-container {
+    padding: 20px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: white;
+}
+
+.card-link:hover {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.bottom-nav {
+    background-color: #1b1b1b;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-nav .nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom-nav .nav-link {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.bottom-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+.bottom-nav .nav-item i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.bottom-nav .nav-item.active .nav-link {
+    color: #0d6efd;
+}
