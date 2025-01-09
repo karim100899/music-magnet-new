@@ -1,23 +1,41 @@
-html {
+/* Algemene opmaak */
+html, body {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-image: linear-gradient(to right, #333333 , #262626, #1F1F1F, #000000);
+body {
+    background-image: linear-gradient(to right, #333333, #262626, #1F1F1F, #000000);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-bottom: 60px; /* Ruimte onderaan reserveren voor de navigatie */
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+/* Profielfoto - Zorg ervoor dat de profielfoto altijd het juiste formaat heeft */
+.profielfoto-container {
+    width: 300px; /* Stel de breedte van de container in */
+    height: 300px; /* Stel de hoogte van de container in */
+    border-radius: 50%; /* Maak het een cirkel */
+    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
+    border: 2px solid #ffffff; /* Voeg een rand toe rondom de foto */
+    margin-bottom: 20px; /* Voeg wat ruimte toe onder de foto */
 }
 
+.profielfoto-container img {
+    width: 100%; /* Zorg ervoor dat de afbeelding de hele container vult */
+    height: 100%; /* Zorg ervoor dat de afbeelding de hoogte van de container vult */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding de container bedekt zonder vervorming */
+}
+
+/* Kaarten */
 .card {
     background-color: #3a3a3a;
     border: none;
     color: white;
     margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
@@ -29,33 +47,58 @@ body{
     padding: 20px;
 }
 
-.card-link {
+.card-link,
+#card-link-btn {
     text-decoration: none;
     color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 15px;
 }
 
-.card-link:hover {
-    color: #f0f0f0;
-    text-decoration: none;
+.card-link:hover,
+#card-link-btn:hover {
+    background-color: #0056b3;
 }
 
+/* Bottom Navigation */
 .bottom-nav {
     background-color: #1b1b1b;
-    padding: 15px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Zorgt dat de nav altijd boven andere elementen blijft */
 }
 
 .bottom-nav .nav {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav .nav-item {
+    text-align: center;
 }
 
 .bottom-nav .nav-link {
     color: white;
     font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .bottom-nav .nav-link:hover {
@@ -64,7 +107,6 @@ body{
 
 .bottom-nav .nav-item i {
     font-size: 1.5rem;
-    margin-bottom: 5px;
 }
 
 .bottom-nav .nav-item.active .nav-link {
